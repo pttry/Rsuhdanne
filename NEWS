@@ -1,0 +1,80 @@
+Rsuhdanne 0.10.4
+----------------
+* Fix Uusimaa error for 2010-2011
+* Delete missing values from end
+* Shorter tol names for `make_TyoQ_2_rds()` and tol_code column.
+
+
+Rsuhdanne 0.10.3
+---------------
+
+* Now accepts Maakunta and maakunta in filename.
+* fix `make_TyoQ_1_rds()` errors.
+
+Rsuhdanne 0.10.2
+---------------
+
+* Set print.info to FALSE as it give an error. (match.call in get.info in dloads does not work)
+
+
+Rsuhdanne 0.10.2
+---------------
+
+* Fix new tol4 for makeTyoQ()
+
+Rsuhdanne 0.10
+---------------
+
+* new make_TyoQ_1_rds to write ty?llisyystutkimuksen maakunta1 taulu to rds-file
+* new make_TyoQ_2_rds to write ty?llisyystutkimuksen maakunta2 taulu to rds-file
+
+Rsuhdanne 0.8
+---------------
+* new update_shadow_rate
+
+Rsuhdanne 0.8
+---------------
+* New "Ennuste" path
+
+Rsuhdanne 0.7.5
+---------------
+* fix getTyoelkei.R after change in web page
+
+Rsuhdanne 0.7.4
+---------------
+* fix tietok_dir() error in makeTyoQ
+* New TOL08 names due to changes by Tilastokeskus
+
+Rsuhdanne 0.7.3
+---------------
+
+* tietok_dir and hakut_dir now read value from options and set them with defaults if missing.
+
+Rsuhdanne 0.7.2
+---------------
+
+* fix makeTyoelakei to give years as headers
+
+Rsuhdanne 0.7.1
+---------------
+* R3.0
+
+Rsuhdanne 0.7
+-------------
+* makeQuery modified to use load(print.info=TRUE)
+
+Rsuhdanne 0.6
+-------------
+* makeTyoelakei
+
+Rsuhdanne 0.5
+-------------
+
+* MakeQuery: add span only if missing. span default NULL.
+* updateHaut() writes usable hakutiedot- file with final TRUE
+* Added makeTyoQ, read_tyoQ and tyoQfiles to compose tyovoimatiedustelun maakuntataulut data. Px-files are sent to Janne. These functions will process those files.
+
+Rsuhdanne 0.4
+-------------
+
+* transformations of time series before saving. Use 'trans' in 'makeQuery'. Implemented 'season' for seasonal adjusment.
