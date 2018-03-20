@@ -24,7 +24,6 @@ Read "Maakunta1" and "Maakunta2" px-files and write to rds file.
 Add Ita-Uusimaa to Uusimaa if prensent.
 writes variables from for Maakunta1.
 Ratios are omit because aggregating Uusimaa and Ita-Uusimaa.
-Calls \code{\link{read_tyoQ}}
 }
 \examples{
   \dontrun{
@@ -35,7 +34,6 @@ k <- make_TyoQ_2_rds(ddir = tyoq_dir)
 }
 }
 \seealso{
-Other tyoQ: \code{\link{makeTyoQ}},
-  \code{\link{read_tyoQ}}, \code{\link{tyoQfiles}}
+Other tyoQ: \code{\link{tyoQfiles}}
 }
 \keyword{IO}

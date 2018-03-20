@@ -13,7 +13,7 @@ tyoQfiles(pattern,
 \item{ddir}{folder to look for files.}
 }
 \description{
-Get data files for \code{\link{read_tyoQ}} from \code{ddir}
+Get data files for \code{\link{make_TyoQ_1_rds}} from \code{ddir}
 }
 \examples{
 \dontrun{
@@ -22,7 +22,6 @@ Get data files for \code{\link{read_tyoQ}} from \code{ddir}
  }
 }
 \seealso{
-Other tyoQ: \code{\link{makeTyoQ}},
-  \code{\link{make_TyoQ_1_rds}}, \code{\link{read_tyoQ}}
+Other tyoQ: \code{\link{make_TyoQ_1_rds}}
 }
 \keyword{IO}

@@ -1,6 +1,6 @@
 #' Get files for read_tyoQ
 #'
-#' Get data files for \code{\link{read_tyoQ}} from \code{ddir}
+#' Get data files for \code{\link{make_TyoQ_1_rds}} from \code{ddir}
 #'
 #' @param pattern pattern in files to match
 #' @param ddir folder to look for files.
