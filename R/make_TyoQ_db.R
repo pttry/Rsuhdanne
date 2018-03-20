@@ -5,7 +5,6 @@
 #' Add Ita-Uusimaa to Uusimaa if prensent.
 #' writes variables from for Maakunta1.
 #' Ratios are omit because aggregating Uusimaa and Ita-Uusimaa.
-#' Calls \code{\link{read_tyoQ}}
 #' 
 #' 
 #' @param to_file A path to file to write. If \code{NULL} just returns a data.frame (invisibly)
@@ -68,6 +67,7 @@ make_TyoQ_1_rds <- function(to_file = NULL, ...){
   
   dat2 <- dat1 %>%
     filter(Maakunta != " ",
+           Maakunta != "",
            Tiedot %in% c("Ty\u00f6ik\u00e4inen v\u00e4est\u00f6", "Ty\u00f6lliset", "Ty\u00f6tt\u00f6m\u00e4t", "Ty\u00f6voima", "Ty\u00f6voimaan kuulumattomat"))  %>%            # Tyhj\u00e4 maakunta pois
     dplyr::distinct() %>%
     dplyr::group_by(Maakunta, Ajanjakso, Vuosi, Ika, Tiedot, Sukupuoli) %>%
@@ -153,7 +153,8 @@ make_TyoQ_2_rds <- function(to_file = NULL, ...){
   
   dat2 <- dat1 %>%
     dplyr::filter(Maakunta != " ",
-           !is.na(tol))  %>%         # Tyhj\u00e4 maakunta ja tol pois
+                  Maakunta != "",
+                  !is.na(tol))  %>%         # Tyhj\u00e4 maakunta ja tol pois
     dplyr::distinct() %>%
     dplyr::group_by(Maakunta, Ajanjakso, Vuosi, tol_code, tol, Tiedot) %>%
     dplyr::summarise(data = sum(value, na.rm = TRUE)) %>%
