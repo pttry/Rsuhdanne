@@ -1,14 +1,12 @@
 Package: Rsuhdanne
 Type: Package
 Title: Functions to update suhdanne tietokanta
-Version: 0.10.3.9005
+Version: 0.11.0
 Author: Janne Huovari
 Maintainer: Janne Huovar <janne.huovari@ptt.fi>
 Description: Functions to update suhdanne tietokanta.
 Imports: pxR,
     XML,
-    gWidgets,
-    gWidgetstcltk,
     plyr,
     dplyr,
     tidyr,

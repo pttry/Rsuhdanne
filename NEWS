@@ -1,3 +1,9 @@
+Rsuhdanne 0.11.0
+----------------
+* Old functions removed
+* no longer depends dload (and its read.px)
+
+
 Rsuhdanne 0.10.4
 ----------------
 * Fix Uusimaa error for 2010-2011
