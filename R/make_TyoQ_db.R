@@ -14,7 +14,7 @@
 #' @return (invisibly) a data.frame and write to rds-file, if given
 #'
 #' @family tyoQ
-#' @import dplyr pxR
+#' @import dplyr 
 #' @export
 #' @encoding UTF-8
 #' @keywords IO
@@ -31,7 +31,7 @@ make_TyoQ_1_rds <- function(to_file = NULL, ...){
   files1 <- tyoQfiles("aakunta1", ...)
   
   # read px-files
-  dat_px <- lapply(files1, function(x) as.data.frame(pxR::read.px(x)))
+  dat_px <- lapply(files1, function(x) as.data.frame(read_px(x)))
   
   ## clean data
   # names
@@ -90,7 +90,7 @@ make_TyoQ_2_rds <- function(to_file = NULL, ...){
   files1 <- tyoQfiles("aakunta2", ...)[-1] # ensimmaisessa vanha toimialajako, ei kayteta
   
   # read px-files
-  dat_px <- lapply(files1, function(x) as.data.frame(pxR::read.px(x)))
+  dat_px <- lapply(files1, function(x) as.data.frame(read_px(x)))
   
   ## clean data
   # names
