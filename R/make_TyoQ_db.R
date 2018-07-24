@@ -53,7 +53,7 @@ make_TyoQ_1_rds <- function(to_file = NULL, ...){
   dat1 <- dat1[nrow(dat1):1L,]
 
   # delete missing (fron end) and compelte (for other deleted)
-  dat1 <- subset(dat1, !is.na(value))
+  dat1 <- subset(dat1, !is.na(data))
   dat1 <- tidyr::complete(dat1, 
                           Maakunta, tidyr::nesting(Ajanjakso, Vuosi), Ika, Tiedot, Sukupuoli)
   
@@ -71,7 +71,7 @@ make_TyoQ_1_rds <- function(to_file = NULL, ...){
            Tiedot %in% c("Ty\u00f6ik\u00e4inen v\u00e4est\u00f6", "Ty\u00f6lliset", "Ty\u00f6tt\u00f6m\u00e4t", "Ty\u00f6voima", "Ty\u00f6voimaan kuulumattomat"))  %>%            # Tyhj\u00e4 maakunta pois
     dplyr::distinct() %>%
     dplyr::group_by(Maakunta, Ajanjakso, Vuosi, Ika, Tiedot, Sukupuoli) %>%
-    dplyr::summarise(data = sum(value, na.rm = TRUE)) %>%
+    dplyr::summarise(data = sum(data, na.rm = TRUE)) %>%
     dplyr::ungroup() %>%
     
     droplevels()
@@ -141,7 +141,7 @@ make_TyoQ_2_rds <- function(to_file = NULL, ...){
   
   # delete missing (fron end) and compelte (for other deleted)
   
-  dat1 <- subset(dat1, !is.na(value))
+  dat1 <- subset(dat1, !is.na(data))
   dat1 <- tidyr::complete(dat1, 
                           Maakunta, tidyr::nesting(Ajanjakso, Vuosi), 
                           tidyr::nesting(tol_code, tol), Tiedot)
@@ -157,7 +157,7 @@ make_TyoQ_2_rds <- function(to_file = NULL, ...){
                   !is.na(tol))  %>%         # Tyhj\u00e4 maakunta ja tol pois
     dplyr::distinct() %>%
     dplyr::group_by(Maakunta, Ajanjakso, Vuosi, tol_code, tol, Tiedot) %>%
-    dplyr::summarise(data = sum(value, na.rm = TRUE)) %>%
+    dplyr::summarise(data = sum(data, na.rm = TRUE)) %>%
     dplyr::ungroup() %>%
     droplevels()
   
