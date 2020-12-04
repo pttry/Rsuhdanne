@@ -13,6 +13,8 @@ getTyoelakei(span = NULL)
 Get tyoelakeindeksi from \url{http://tyoelakelakipalvelu.etk.fi/fi/indeksi/indeksiluvut.html}
 }
 \seealso{
-Other tyoelakei: \code{\link{makeTyoelakei}}
+Other tyoelakei: 
+\code{\link{makeTyoelakei}()}
 }
+\concept{tyoelakei}
 \keyword{IO}

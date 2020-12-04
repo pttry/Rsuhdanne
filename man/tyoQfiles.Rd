@@ -4,8 +4,10 @@
 \alias{tyoQfiles}
 \title{Get files for read_tyoQ}
 \usage{
-tyoQfiles(pattern,
-  ddir = "Y:/Yhteiset datat/Aluetalous/Työ/Työvoimatutkimus MK")
+tyoQfiles(
+  pattern,
+  ddir = "Y:/Yhteiset datat/Aluetalous/Työ/Työvoimatutkimus MK"
+)
 }
 \arguments{
 \item{pattern}{pattern in files to match}
@@ -22,6 +24,8 @@ Get data files for \code{\link{make_TyoQ_1_rds}} from \code{ddir}
  }
 }
 \seealso{
-Other tyoQ: \code{\link{make_TyoQ_1_rds}}
+Other tyoQ: 
+\code{\link{make_TyoQ_1_rds}()}
 }
+\concept{tyoQ}
 \keyword{IO}

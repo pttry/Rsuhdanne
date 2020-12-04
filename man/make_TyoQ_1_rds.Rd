@@ -28,12 +28,14 @@ Ratios are omit because aggregating Uusimaa and Ita-Uusimaa.
 \examples{
   \dontrun{
   tyoq_dir <- file.path(path.expand('~'), "..", 
-  "Pellervon Taloustutkimus PTT ry/Data - Tiedostot/Työmarkkinat/Työvoimatutkimus MK")
+  "Pellervon Taloustutkimus PTT ry/Data - Tiedostot/TyÃ¶markkinat/TyÃ¶voimatutkimus MK")
 k <- make_TyoQ_1_rds(ddir = tyoq_dir)
 k <- make_TyoQ_2_rds(ddir = tyoq_dir)
 }
 }
 \seealso{
-Other tyoQ: \code{\link{tyoQfiles}}
+Other tyoQ: 
+\code{\link{tyoQfiles}()}
 }
+\concept{tyoQ}
 \keyword{IO}

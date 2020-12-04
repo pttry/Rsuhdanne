@@ -13,6 +13,8 @@ makeTyoelakei(span)
 Uses \code{\link{getTyoelakei}} to get tyoelakeindeksi data and write to SarjatMuut/Elake.xlxs
 }
 \seealso{
-Other tyoelakei: \code{\link{getTyoelakei}}
+Other tyoelakei: 
+\code{\link{getTyoelakei}()}
 }
+\concept{tyoelakei}
 \keyword{IO}

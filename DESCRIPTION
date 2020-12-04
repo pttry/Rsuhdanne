@@ -1,7 +1,7 @@
 Package: Rsuhdanne
 Type: Package
 Title: Functions to update suhdanne tietokanta
-Version: 0.11.1
+Version: 0.11.2
 Author: Janne Huovari
 Maintainer: Janne Huovar <janne.huovari@ptt.fi>
 Description: Functions to update suhdanne tietokanta.
@@ -13,5 +13,5 @@ Imports: XML,
     forcats
 License: GPL
 LazyLoad: yes
-Encoding:UTF-8
-RoxygenNote: 6.0.1
+Encoding: UTF-8
+RoxygenNote: 7.1.0
