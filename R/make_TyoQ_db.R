@@ -31,7 +31,7 @@ make_TyoQ_1_rds <- function(to_file = NULL, ...){
   files1 <- tyoQfiles("aakunta1", ...)
   
   # read px-files
-  dat_px <- lapply(files1, function(x) as.data.frame(read_px(x)))
+  dat_px <- lapply(files1, function(x) as.data.frame(read_px(x, encoding = "latin1")))
   
   ## clean data
   # names
@@ -90,7 +90,7 @@ make_TyoQ_2_rds <- function(to_file = NULL, ...){
   files1 <- tyoQfiles("aakunta2", ...)[-1] # ensimmaisessa vanha toimialajako, ei kayteta
   
   # read px-files
-  dat_px <- lapply(files1, function(x) as.data.frame(read_px(x)))
+  dat_px <- lapply(files1, function(x) as.data.frame(read_px(x, encoding = "latin1")))
   
   ## clean data
   # names

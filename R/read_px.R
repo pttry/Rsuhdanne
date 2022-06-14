@@ -25,7 +25,7 @@ read_px <- function(file, in.codes = FALSE, org.order = FALSE, encoding = "unkno
   
   data.n <- match("DATA=", px)
   meta <- px[1:(data.n-1)]
-  meta <- gsub(";$",";;", meta, useBytes=TRUE)
+  meta <- gsub(";$",";;", meta, useBytes=FALSE)
   meta.v <- paste(meta, sep=" ", collapse = "")
   meta.v <- unlist(strsplit(meta.v, ";;"))
   
